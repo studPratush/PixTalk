@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    >
+
+
+    <RelativeLayout
+        android:background="@color/colorPrimary"
+        android:layout_weight=".5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:id="@+id/imgoptionq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:src="@drawable/ic_launcher_foreground" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/colorAccent"
+        android:layout_weight=".5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/imgoption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:src="@drawable/ic_launcher_background" />
+
+
+            <ImageView
+                android:id="@+id/imgoption2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:src="@drawable/ic_launcher_background" />
+
+
+            <ImageView
+                android:id="@+id/imgoption3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher_background" />
+
+        </GridLayout>
+
+    </RelativeLayout>
+</LinearLayout>
