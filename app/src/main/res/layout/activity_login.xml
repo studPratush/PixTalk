@@ -21,21 +21,18 @@
     <EditText
         android:id="@+id/txtpassword"
         android:hint="@string/password"
-        android:layout_below="@+id/txtusername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btnlogin"
         android:text="@string/login"
-        android:layout_below="@+id/txtpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btnsignup"
-        android:text="@string/login"
-        android:layout_below="@+id/btnlogin"
+        android:text="@string/sign_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

@@ -54,8 +54,7 @@ public class Login extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-//        firebaseAuth = FirebaseAuth.getInstance();
-
+       //firebaseAuth = FirebaseAuth.getInstance();
         mail =  findViewById(R.id.txtusername);
 
         password = findViewById(R.id.txtpassword);
@@ -117,7 +116,8 @@ public class Login extends AppCompatActivity  {
         } else {
             if(email.equals("admin@com") && pass.equals("12345"))
             {
-                startActivity(new Intent(Login.this,MainActivity.class));
+                startActivity(new Intent(Login.this,ImageGeneration.class));
+                finish();
             }
                   }
 

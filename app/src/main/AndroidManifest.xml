@@ -15,7 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Counting"></activity>
+        <activity android:name=".QnALevel1"></activity>
+        <activity android:name=".QnAMenu" />
+        <activity android:name=".Counting" />
         <activity android:name=".SWLAudio" />
         <activity android:name=".SWLImages" />
         <activity android:name=".SWL" />
