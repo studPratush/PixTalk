@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.asd">
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -15,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".QnALevel1"></activity>
+        <activity android:name=".QnALevel1" />
         <activity android:name=".QnAMenu" />
         <activity android:name=".Counting" />
         <activity android:name=".SWLAudio" />
@@ -23,11 +22,11 @@
         <activity android:name=".SWL" />
         <activity android:name=".Differentiate" />
         <activity android:name=".ChildMenu" />
-        <activity android:name=".ImageGeneration" />
+        <activity android:name=".Splash" />
         <activity
             android:name=".Signup"
             android:label="@string/title_activity_signup" />
-        <activity android:name=".Splash">
+        <activity android:name=".ImageGeneration">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
