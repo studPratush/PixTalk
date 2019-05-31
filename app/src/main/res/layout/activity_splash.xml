@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="#047BD5"
     android:visibility="visible"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
     tools:context=".Splash"
     tools:visibility="visible">
 
