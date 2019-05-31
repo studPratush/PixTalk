@@ -26,16 +26,15 @@
         />
 
 
-
     <Button
         android:id="@+id/btncounting"
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:layout_gravity="right|top"
         android:layout_margin="@dimen/activity_horizontal_margin"
-        android:background="@drawable/T3"
+        android:background="@drawable/num"
 
-         />
+        />
 <TextView
 
     android:fontFamily="Serif"
@@ -86,7 +85,6 @@
 
         />
     <TextView
-
         android:fontFamily="Serif"
         android:textSize="20dp"
         android:textColor="#000000"
