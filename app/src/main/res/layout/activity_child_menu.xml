@@ -16,7 +16,7 @@
 
     <Button
         android:id="@+id/btnswl"
-        android:layout_width="170dp"
+        android:layout_width="160dp"
         android:layout_height="170dp"
         android:layout_gravity="left|top"
 
@@ -28,7 +28,7 @@
 
     <Button
         android:id="@+id/btncounting"
-        android:layout_width="170dp"
+        android:layout_width="160dp"
         android:layout_height="170dp"
         android:layout_gravity="right|top"
         android:layout_margin="@dimen/activity_horizontal_margin"
@@ -58,7 +58,7 @@
 
     <Button
         android:id="@+id/btndifferentiate"
-        android:layout_width="170dp"
+        android:layout_width="160dp"
         android:layout_height="170dp"
         android:layout_gravity="left|bottom"
         android:layout_margin="@dimen/activity_horizontal_margin"
@@ -68,22 +68,24 @@
 
     <Button
         android:id="@+id/btnqna"
-        android:layout_width="170dp"
+        android:layout_width="160dp"
         android:layout_height="170dp"
         android:layout_gravity="right|bottom"
         android:layout_margin="@dimen/activity_horizontal_margin"
         android:background="@drawable/qna"
 
         />
+
     <TextView
 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="Serif"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:textColor="#000000"
         android:text="Differentiate"
+        android:textAlignment="center"
 
-        />
+        android:textColor="#000000"
+        android:textSize="20dp" />
     <TextView
         android:fontFamily="Serif"
         android:textSize="20dp"

@@ -16,7 +16,7 @@ public class Splash extends AppCompatActivity {
                 try {
                     Intent intent;
                     sleep(1000);
-                    intent = new Intent(getApplicationContext(), Login.class);
+                    intent = new Intent(getApplicationContext(), ChildMenu.class);
                     startActivity(intent);
                     finish();
                 } catch (InterruptedException e) {

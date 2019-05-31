@@ -30,10 +30,10 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:background="@color/colorAccent"
-        android:layout_weight=".5"
+        android:layout_weight=".3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#FFFFFF"
         >
 
         <GridLayout
@@ -41,6 +41,7 @@
             android:layout_height="wrap_content"
             android:columnCount="3"
             android:padding="@dimen/activity_horizontal_margin"
+
             android:layout_centerInParent="true">
 
             <ImageView
