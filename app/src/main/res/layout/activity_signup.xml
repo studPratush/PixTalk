@@ -49,6 +49,31 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:fontFamily="serif"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Select an Option"
+        android:textColor="#000000"
+        android:fontFamily="serif"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <RadioButton android:id="@+id/radio_care"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Caregiver"
+            android:fontFamily="serif"
+            />
+        <RadioButton android:id="@+id/radio_autistic"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Autistic Child"
+            android:fontFamily="serif"
+            />
+    </RadioGroup>
+
 
     <TextView
         android:layout_width="match_parent"
