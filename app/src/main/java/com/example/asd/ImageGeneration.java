@@ -75,7 +75,12 @@ public class ImageGeneration extends AppCompatActivity implements View.OnClickLi
 
                     ArrayList<String> result = data
                             .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                    text.setText(result.get(0));
+                    String value = result.get(0);
+                    if(value.contains("flower"))
+                    {
+                        Toast.makeText(getApplicationContext(),"In",Toast.LENGTH_LONG).show();
+                    }
+                    //text.setText(result.get(0));
                 }
                 break;
             }
