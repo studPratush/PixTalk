@@ -87,7 +87,20 @@ public class ImageGeneration extends AppCompatActivity implements View.OnClickLi
         }
         if(v.getId() == R.id.btngenerate)
         {
-
+            Thread myThread = new Thread() {
+                @Override
+                public void run() {
+                    try {
+                        Intent intent;
+                        sleep(1000);
+                        intent = new Intent(getApplicationContext(), ImageCard.class);
+                        startActivity(intent);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
+            myThread.start();
         }
     }
 
@@ -107,9 +120,7 @@ public class ImageGeneration extends AppCompatActivity implements View.OnClickLi
         }
     }
 
-    /**
-     * Receiving speech input
-     * */
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -125,7 +136,8 @@ public class ImageGeneration extends AppCompatActivity implements View.OnClickLi
                     {
 
                         getData(value);
-                        Toast.makeText(getApplicationContext(),"In",Toast.LENGTH_LONG).show();
+                        text.setText(value);
+                        //Toast.makeText(getApplicationContext(),"In",Toast.LENGTH_LONG).show();
 
                     }
                     else
@@ -141,22 +153,36 @@ public class ImageGeneration extends AppCompatActivity implements View.OnClickLi
 
 
 
-    public void getData(String value) {
+    public void getData(final String value) {
 
-        String n="basket",c;
+        //String n="basket",c;
         //n=name.getText().toString();
         //c=city.getText().toString();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, SERVER_URL + "/imagegeneration/basket",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, SERVER_URL + "/testing2",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        Thread myThread = new Thread() {
+                            @Override
+                            public void run() {
+                                try {
+                                    Intent intent;
+                                    sleep(10000);
+
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        };
+                        myThread.start();
+
+
                         JSONObject responseObj = null;
                         try {
 
                             responseObj=new JSONObject(response);
-                            //Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
-                           // Toast.makeText(getApplicationContext(), responseObj.getString("disease"), Toast.LENGTH_SHORT).show();
+
                             String newval=responseObj.getString("data");
                             //Log.d("MAINACTIVITY", newval);
                             byte[] imageBytes = Base64.decode(newval, Base64.DEFAULT);
@@ -174,13 +200,15 @@ public class ImageGeneration extends AppCompatActivity implements View.OnClickLi
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(), "Connection Failed.", Toast.LENGTH_SHORT).show();
+
+                       // Toast.makeText(getApplicationContext(), "Connection Failed.", Toast.LENGTH_SHORT).show();
                        // Log.d("MAINACTIVITY", error.toString());
                     }
                 }) {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
+                params.put("sentence",value);
                 return params;
             }
 

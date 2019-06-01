@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".QnALevel1"></activity>
+        <activity android:name=".ImageCard"></activity>
+        <activity android:name=".QnALevel1" />
         <activity android:name=".QnAMenu" />
         <activity android:name=".Counting" />
         <activity android:name=".SWLAudio" />
@@ -24,9 +25,7 @@
         <activity android:name=".Differentiate" />
         <activity android:name=".ChildMenu" />
         <activity android:name=".ImageGeneration" />
-        <activity
-            android:name=".Signup"
-            />
+        <activity android:name=".Signup" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

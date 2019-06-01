@@ -20,6 +20,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -46,7 +47,7 @@ public class Login extends AppCompatActivity  {
 
     private EditText mail;
     private EditText password;
-  //  public FirebaseAuth firebaseAuth;
+   public FirebaseAuth firebaseAuth;
 
 
 
@@ -54,7 +55,7 @@ public class Login extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-       //firebaseAuth = FirebaseAuth.getInstance();
+       firebaseAuth = FirebaseAuth.getInstance();
         mail =  findViewById(R.id.txtusername);
 
         password = findViewById(R.id.txtpassword);
@@ -111,14 +112,9 @@ public class Login extends AppCompatActivity  {
         }
 
         if (cancel) {
-
             focusView.requestFocus();
         } else {
-            if(email.equals("admin@com") && pass.equals("12345"))
-            {
-                startActivity(new Intent(Login.this,ImageGeneration.class));
-                finish();
-            }
+           signin(email,pass);
                   }
 
     }
@@ -131,6 +127,31 @@ public class Login extends AppCompatActivity  {
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
         return password.length() > 4;
+    }
+
+    public void signin(String email,String pass)
+    {
+        firebaseAuth.signInWithEmailAndPassword(email, pass)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Toast.makeText(Login.this, "Authentication Successful",
+                                    Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(Login.this,ChildMenu.class));
+                            finish();
+                            //FirebaseUser user = firebaseAuth.getCurrentUser();
+                            //updateUI(user);
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            //Log.w(TAG, "signInWithEmail:failure", task.getException());
+                            Toast.makeText(Login.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                            //updateUI(null);
+                        }
+                    }
+                });
     }
 
 

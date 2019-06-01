@@ -40,7 +40,6 @@
         android:id="@+id/speech_text"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="@string/sample_text"
         android:fontFamily="serif"
         android:textColor="#000000"
         android:textSize="25sp"/>
@@ -63,26 +62,6 @@
         android:layout_width="match_parent"
         android:layout_height="30dp" />
 
-
-
-    <ImageView
-       android:src="@drawable/ic_launcher_background"
-       android:id="@+id/imageview"
-       android:layout_width="match_parent"
-       android:layout_height="150dp" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp" />
-
-    <TextView
-        android:id="@+id/generate"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="Generated Image"
-        android:fontFamily="serif"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        android:textAlignment="center"/>
 
 
 </LinearLayout>
