@@ -7,20 +7,19 @@
     android:columnCount="2"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <Button
-        android:id="@+id/btnswl"
+    <ImageButton
+        android:id="@+id/btnanimals"
         android:layout_width="160dp"
         android:layout_height="170dp"
         android:layout_gravity="left|top"
-
         android:layout_margin="@dimen/activity_horizontal_margin"
         android:background="@drawable/panda"
 
         />
 
 
-    <Button
-        android:id="@+id/btncounting"
+    <ImageButton
+        android:id="@+id/btnfruits"
         android:layout_width="160dp"
         android:layout_height="170dp"
         android:layout_gravity="right|top"
@@ -49,8 +48,8 @@
         />
 
 
-    <Button
-        android:id="@+id/btndifferentiate"
+    <ImageButton
+        android:id="@+id/btnflowers"
         android:layout_width="160dp"
         android:layout_height="170dp"
         android:layout_gravity="left|bottom"
@@ -59,8 +58,8 @@
 
         />
 
-    <Button
-        android:id="@+id/btnqna"
+    <ImageButton
+        android:id="@+id/btnbirds"
         android:layout_width="160dp"
         android:layout_height="170dp"
         android:layout_gravity="right|bottom"
@@ -88,13 +87,6 @@
 
 
         />
-
-
-
-
-
-
-
 
 
 </GridLayout>

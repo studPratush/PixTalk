@@ -17,18 +17,22 @@
             android:layout_width="match_parent"
             android:layout_height="50dp" />
 
-        <ImageView
-            android:id="@+id/imgoption1"
+        <ImageButton
+            android:id="@+id/imgoption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/horse"
             android:paddingRight="@dimen/activity_horizontal_margin"/>
 
         <TextView
+            android:text="Hello"
+            android:gravity="center"
+            android:id="@+id/txt1"
             android:layout_width="match_parent"
             android:layout_height="50dp" />
 
         <Button
+            android:id="@+id/playaud"
     android:layout_width="match_parent"
     android:layout_height="60dp"
             android:fontFamily="serif"

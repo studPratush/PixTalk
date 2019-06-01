@@ -6,19 +6,38 @@
     android:columnCount="2"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <Button
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical">
+
+
+
+    <ImageButton
         android:id="@+id/btn1"
         android:layout_width="160dp"
         android:layout_height="170dp"
         android:layout_gravity="left|top"
-
         android:layout_margin="@dimen/activity_horizontal_margin"
         android:background="@drawable/lion"
 
         />
+        <TextView
+            android:textSize="24dp"
+            android:id="@+id/opt1"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello"/>
+
+    </LinearLayout>
 
 
-    <Button
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical">
+    <ImageButton
         android:id="@+id/btn2"
         android:layout_width="160dp"
         android:layout_height="170dp"
@@ -27,7 +46,21 @@
         android:background="@drawable/panda"
 
         />
-    <Button
+        <TextView
+            android:textSize="24dp"
+            android:id="@+id/opt2"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical">
+    <ImageButton
     android:id="@+id/btn3"
     android:layout_width="160dp"
     android:layout_height="170dp"
@@ -37,9 +70,23 @@
     android:background="@drawable/zebra"
 
     />
+        <TextView
+            android:textSize="24dp"
+            android:id="@+id/opt3"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello"/>
 
+    </LinearLayout>
 
-    <Button
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical">
+
+    <ImageButton
+
         android:id="@+id/btn4"
         android:layout_width="160dp"
         android:layout_height="170dp"
@@ -48,4 +95,14 @@
         android:background="@drawable/horse"
 
         />
+        <TextView
+            android:textSize="24dp"
+            android:id="@+id/opt4"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello"/>
+
+    </LinearLayout>
+
 </GridLayout>
