@@ -26,6 +26,7 @@ public class SWL extends AppCompatActivity implements View.OnClickListener {
         i2.setOnClickListener(this);
         i3.setOnClickListener(this);
         i4.setOnClickListener(this);
+
     }
 
     @Override

@@ -70,6 +70,7 @@
 
     <TextView
 
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="Serif"
@@ -84,7 +85,6 @@
         android:textColor="#000000"
         android:text="Birds"
         android:textAlignment="center"
-
 
         />
 

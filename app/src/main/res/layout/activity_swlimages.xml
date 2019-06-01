@@ -96,6 +96,7 @@
 
         />
         <TextView
+
             android:textSize="24dp"
             android:id="@+id/opt4"
             android:gravity="center"

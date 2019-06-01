@@ -42,6 +42,7 @@ public class SWLImages extends AppCompatActivity {
         o4 = findViewById(R.id.opt4);
 
 
+
       //  i1.setOnClickListener(this);
       /*  i2.setOnClickListener(this);
         i3.setOnClickListener(this);
