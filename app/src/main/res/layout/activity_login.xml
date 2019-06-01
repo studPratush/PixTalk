@@ -15,15 +15,11 @@
 
     tools:context=".Login">
 
-    <ScrollView android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView" >
 
     <TextView
 
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="180dp"
         android:background="#047BD5"
 
         android:gravity="center_vertical"
@@ -76,7 +72,5 @@
         android:background="#F7A200"
         android:text="@string/sign_up"
         app:fontFamily="serif" />
-
-    </ScrollView>
 
 </LinearLayout>
