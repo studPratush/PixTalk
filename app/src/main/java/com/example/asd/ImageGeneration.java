@@ -123,6 +123,7 @@ public class ImageGeneration extends AppCompatActivity implements View.OnClickLi
                     String value = result.get(0);
                     if(value.contains("flower"))
                     {
+
                         getData(value);
                         Toast.makeText(getApplicationContext(),"In",Toast.LENGTH_LONG).show();
 
