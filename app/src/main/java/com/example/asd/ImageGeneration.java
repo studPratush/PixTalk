@@ -2,9 +2,12 @@ package com.example.asd;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -12,7 +15,45 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
+
+
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+
+
+
+import static android.provider.ContactsContract.CommonDataKinds.Website.URL;
 
 public class ImageGeneration extends AppCompatActivity implements View.OnClickListener {
 
@@ -21,6 +62,10 @@ public class ImageGeneration extends AppCompatActivity implements View.OnClickLi
     Button generate;
     TextView text;
     private final int REQ_CODE_SPEECH_INPUT = 100;
+
+    public static final String SERVER_URL="http://192.168.43.16:5000";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,8 +123,12 @@ public class ImageGeneration extends AppCompatActivity implements View.OnClickLi
                     String value = result.get(0);
                     if(value.contains("flower"))
                     {
+                        getData(value);
                         Toast.makeText(getApplicationContext(),"In",Toast.LENGTH_LONG).show();
+
                     }
+                    else
+                        text.setText(getString(R.string.pta));
                     //text.setText(result.get(0));
                 }
                 break;
@@ -87,5 +136,61 @@ public class ImageGeneration extends AppCompatActivity implements View.OnClickLi
 
         }
     }
+
+
+
+
+    public void getData(String value) {
+
+        String n="basket",c;
+        //n=name.getText().toString();
+        //c=city.getText().toString();
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, SERVER_URL + "/imagegeneration/basket",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        JSONObject responseObj = null;
+                        try {
+
+                            responseObj=new JSONObject(response);
+                            //Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
+                           // Toast.makeText(getApplicationContext(), responseObj.getString("disease"), Toast.LENGTH_SHORT).show();
+                            String newval=responseObj.getString("data");
+                            //Log.d("MAINACTIVITY", newval);
+                            byte[] imageBytes = Base64.decode(newval, Base64.DEFAULT);
+                           Bitmap decodedImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+                            image.setImageBitmap(decodedImage);
+
+                            //Toast.makeText(getApplicationContext(),"newval is "+newval,Toast.LENGTH_LONG).show();
+                           //text.setText(newval);
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(), "Connection Failed.", Toast.LENGTH_SHORT).show();
+                       // Log.d("MAINACTIVITY", error.toString());
+                    }
+                }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                return params;
+            }
+
+        };
+
+        //Adding the string request to the queue
+
+        RequestQueue requestQueue = Volley.newRequestQueue(ImageGeneration.this);
+        requestQueue.add(stringRequest);
+
+    }
+
 
 }

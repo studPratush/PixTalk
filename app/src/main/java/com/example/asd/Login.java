@@ -46,7 +46,7 @@ public class Login extends AppCompatActivity  {
 
     private EditText mail;
     private EditText password;
-    public FirebaseAuth firebaseAuth;
+  //  public FirebaseAuth firebaseAuth;
 
 
 

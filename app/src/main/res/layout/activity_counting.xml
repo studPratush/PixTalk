@@ -25,7 +25,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="@dimen/activity_horizontal_margin"
-            android:src="@drawable/ic_launcher_foreground" />
+            android:src="@drawable/ic_launcher_foreground"
+            android:contentDescription="@string/todo"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            tools:ignore="RtlSymmetry" />
 
     </RelativeLayout>
 
@@ -48,7 +51,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingRight="@dimen/activity_horizontal_margin"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@drawable/ic_launcher_background"
+                android:contentDescription="@string/todo"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                tools:ignore="RtlSymmetry" />
 
 
             <ImageView
@@ -56,14 +62,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingRight="@dimen/activity_horizontal_margin"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@drawable/ic_launcher_background"
+                android:contentDescription="@string/todo"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                tools:ignore="RtlSymmetry"/>
 
 
             <ImageView
                 android:id="@+id/imgoption3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@drawable/ic_launcher_background"
+                android:contentDescription="@string/todo"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                tools:ignore="RtlSymmetry"/>
 
         </GridLayout>
 

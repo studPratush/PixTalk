@@ -1,6 +1,7 @@
 package com.example.asd;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -16,7 +17,7 @@ public class Splash extends AppCompatActivity {
                 try {
                     Intent intent;
                     sleep(1000);
-                    intent = new Intent(getApplicationContext(), Login.class);
+                    intent = new Intent(getApplicationContext(), ImageGeneration.class);
                     startActivity(intent);
                     finish();
                 } catch (InterruptedException e) {
