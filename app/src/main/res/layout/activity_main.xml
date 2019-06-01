@@ -62,5 +62,9 @@
         android:text="Autistic Children"
         app:fontFamily="serif"
         android:textSize="20sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
 
 </LinearLayout>
