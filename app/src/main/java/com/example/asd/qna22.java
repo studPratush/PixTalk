@@ -11,7 +11,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 
-public class QnALevel1 extends AppCompatActivity {
+public class qna22 extends AppCompatActivity {
 
     private RadioGroup radioGroup;
     private RadioButton radioButton;
@@ -20,7 +20,7 @@ public class QnALevel1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_qn_alevel1);
+        setContentView(R.layout.activity_qna22);
         addListenerOnButton();
     }
 
@@ -38,17 +38,17 @@ public class QnALevel1 extends AppCompatActivity {
 
                 // find the radiobutton by returned id
                 radioButton = (RadioButton) findViewById(selectedId);
-                if(selectedId==R.id.radio1){
-                    Toast.makeText(QnALevel1.this,
+                if(selectedId==R.id.radio3){
+                    Toast.makeText(qna22.this,
                             radioButton.getText() + " is correct answer", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(), qna22.class));
+                    startActivity(new Intent(getApplicationContext(), qna23.class));
 
 
                 }
                 else{
-                    Toast.makeText(QnALevel1.this,
+                    Toast.makeText(qna22.this,
                             radioButton.getText()+" is incorrect answer", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(), qna22.class));
+                    startActivity(new Intent(getApplicationContext(), qna23.class));
 
                 }
 

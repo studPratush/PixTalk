@@ -26,8 +26,20 @@ public class QnAMenu extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         if(v.getId() == R.id.btnlevel1)
         {
+            startActivity(new Intent(QnAMenu.this,qna11.class));
+        }
+        else if(v.getId() == R.id.btnlevel2)
+        {
             startActivity(new Intent(QnAMenu.this,QnALevel1.class));
         }
+        else
+        {
+
+                startActivity(new Intent(QnAMenu.this,qna31.class));
+
+
+        }
+
 
     }
 }

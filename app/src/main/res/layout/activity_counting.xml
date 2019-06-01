@@ -13,72 +13,112 @@
     >
 
 
-    <RelativeLayout
-        android:background="@color/colorPrimary"
-        android:layout_weight=".5"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_centerInParent="true"
-            android:id="@+id/imgoptionq"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:src="@drawable/ic_launcher_foreground"
-            android:contentDescription="@string/todo"
-            android:paddingEnd="@dimen/activity_horizontal_margin"
-            tools:ignore="RtlSymmetry" />
+        <TextView
 
-    </RelativeLayout>
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#047BD5"
 
-    <RelativeLayout
-        android:layout_weight=".3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF"
-        >
+            android:gravity="center_vertical"
+            android:text="THREE\n3"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="50sp"
+            android:fontFamily="serif"
+            tools:visibility="visible" />
+
+
+
+
 
         <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:columnCount="3"
-            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
 
-            android:layout_centerInParent="true">
+            android:layout_marginEnd="29dp"
+            android:layout_marginRight="29dp"
+            android:columnCount="3"
+            android:padding="@dimen/activity_horizontal_margin">
 
             <ImageView
                 android:id="@+id/imgoption1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:src="@drawable/ic_launcher_background"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
                 android:contentDescription="@string/todo"
                 android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:src="@drawable/d9"
                 tools:ignore="RtlSymmetry" />
 
 
             <ImageView
                 android:id="@+id/imgoption2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:src="@drawable/ic_launcher_background"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
                 android:contentDescription="@string/todo"
                 android:paddingEnd="@dimen/activity_horizontal_margin"
-                tools:ignore="RtlSymmetry"/>
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:src="@drawable/c3"
+                tools:ignore="RtlSymmetry" />
 
 
             <ImageView
                 android:id="@+id/imgoption3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_launcher_background"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
                 android:contentDescription="@string/todo"
                 android:paddingEnd="@dimen/activity_horizontal_margin"
-                tools:ignore="RtlSymmetry"/>
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:src="@drawable/t4"
+                tools:ignore="RtlSymmetry" />
+
 
         </GridLayout>
 
-    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radiogrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="60dp">
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:fontFamily="serif"
+            android:text="A" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:fontFamily="serif"
+            android:text="B" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:fontFamily="serif"
+            android:text="C" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <Button
+        android:id="@+id/btn1"
+        android:text="next question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:fontFamily="serif"
+        android:textSize="25sp"
+        android:background="#F7A200"/>
+
 </LinearLayout>

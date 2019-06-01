@@ -1,3 +1,4 @@
+
 package com.example.asd;
 
 import android.content.Intent;
@@ -11,7 +12,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 
-public class QnALevel1 extends AppCompatActivity {
+public class counting3 extends AppCompatActivity {
 
     private RadioGroup radioGroup;
     private RadioButton radioButton;
@@ -20,7 +21,7 @@ public class QnALevel1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_qn_alevel1);
+        setContentView(R.layout.activity_counting3);
         addListenerOnButton();
     }
 
@@ -39,16 +40,16 @@ public class QnALevel1 extends AppCompatActivity {
                 // find the radiobutton by returned id
                 radioButton = (RadioButton) findViewById(selectedId);
                 if(selectedId==R.id.radio1){
-                    Toast.makeText(QnALevel1.this,
+                    Toast.makeText(counting3.this,
                             radioButton.getText() + " is correct answer", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(), qna22.class));
+                    startActivity(new Intent(getApplicationContext(), counting4.class));
 
 
                 }
                 else{
-                    Toast.makeText(QnALevel1.this,
+                    Toast.makeText(counting3.this,
                             radioButton.getText()+" is incorrect answer", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(), qna22.class));
+                    startActivity(new Intent(getApplicationContext(), counting4.class));
 
                 }
 
@@ -60,3 +61,7 @@ public class QnALevel1 extends AppCompatActivity {
 
     }
 }
+
+
+
+
